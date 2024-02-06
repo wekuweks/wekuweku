@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+</head>
+<body>
+
+<script>
+    function greetUser() {
+        var choice;
+
+        do {
+            var response = prompt("Hi mimay, Gulat ka no alam ko palayaw mo. Would you like to continue? (yes/no)");
+
+            if (response.toLowerCase() === "yes") {
+                alert("Yey thank you.");
+
+                var valentineResponse = prompt("Will you be my Valentine? (yes/no)");
+
+                if (valentineResponse.toLowerCase() === "yes") {
+                    alert("");
+                } else if (valentineResponse.toLowerCase() !== "no") {
+                    alert("Invalid answer.");
+                }
+            } else if (response.toLowerCase() === "no") {
+                alert("Invalid answer. Please try again.");
+            } else {
+                alert("Invalid answer.");
+            }
+
+            choice = response.toLowerCase(); // Assigning the response to choice for looping
+        } while (choice !== "yes");
+    }
+
+    greetUser();
+</script>
+
+</body>
+</html>
